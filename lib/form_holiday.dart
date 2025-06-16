@@ -56,26 +56,7 @@ class _HolidaysPageState extends State<HolidaysPage> {
   }
 
   String formatDate(DateTime date) {
-    final List<String> meses = [
-      'Janeiro',
-      'Fevereiro',
-      'Março',
-      'Abril',
-      'Maio',
-      'Junho',
-      'Julho',
-      'Agosto',
-      'Setembro',
-      'Outubro',
-      'Novembro',
-      'Dezembro',
-    ];
-
-    String dia = date.day.toString();
-    String mes = meses[date.month - 1];
-    String ano = date.year.toString();
-
-    return '$dia de $mes de $ano';
+    return DateFormat("d 'de' MMMM 'de' y", 'pt_BR').format(date);
   }
 
   IconData _getIconForHoliday(String name) {

@@ -32,7 +32,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       drawer: Drawer(
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
@@ -147,7 +146,6 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                     ).then((value) async {
-                      //aqui atualiza a lista após fechar dialog
                       courses = getCourses();
                       setState(() => {});
                     });
